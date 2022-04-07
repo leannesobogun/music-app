@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Card from './Card';
 
 export const ArtistIndex = () => {
@@ -9,9 +9,8 @@ export const ArtistIndex = () => {
       {id: 4, name: "Wizkid", abstract:"Ayodeji Ibrahim Balogun, also known as Wizkid, is a 31 year old Nigerian singer and songwriter. He began his music career at the age of 11 but gained popularity after the release of his first album 'Superstar' in 2011. Since then he has released songs with popular artists such as Beyonce, Drake and Justin Bieber. In 2021, he was the most streamed Nigerian artist of all time on Spotify with over 3.4 billion streams." }
     ]
 
-   const renderArtists = () => artists.map(artist => <Card name={artist.name} abstract={artist.abstract} />)
+   const renderArtists = () => artists.map(artist => <Card name={artist.name} abstract={artist.abstract} id={artist.id} />)
     return (
-          {renderArtists} 
+          renderArtists()
     )
 }
-
